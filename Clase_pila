@@ -1,0 +1,27 @@
+
+Clase Pila
+
+    // Utiliza Nodo para almacenar objetos Libro.
+    // Mantiene una referencia a la cima.
+    // Mantiene el tamaño actual y la capacidad máxima.
+
+    publico vacio Push(Objeto dato)
+        // Crear un nodo y colocarlo en la cima.
+        // Actualizar el tamaño.
+    FinMetodo
+
+    publico Objeto Pop()
+        // Si la pila no está vacía:
+        // retirar y retornar el dato de la cima.
+        // Actualizar la cima y el tamaño.
+    FinMetodo
+
+    publico booleano IsEmpty()
+        // Retornar verdadero si la pila está vacía.
+    FinMetodo
+
+    publico entero obtenerMaxsize()
+        // Retornar la capacidad máxima.
+    FinMetodo
+
+FinClase
