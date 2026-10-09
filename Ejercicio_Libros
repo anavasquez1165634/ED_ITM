@@ -1,0 +1,114 @@
+
+Clase Libro
+
+    privado entero codigo
+    privado cadena nombre
+    privado entero anioPublicacion
+    privado cadena genero
+    privado entero numPag
+    privado real valor
+    privado entero codEditorial
+
+    publico vacio Libro()
+        este.codigo = 0
+        este.nombre = ""
+        este.anioPublicacion = 0
+        este.genero = ""
+        este.numPag = 0
+        este.valor = 0
+        este.codEditorial = 0
+    FinMetodo
+
+    publico vacio asignarCodigo(entero codigo)
+        este.codigo = codigo
+    FinMetodo
+
+    publico entero obtenerCodigo()
+        retornar este.codigo
+    FinMetodo
+
+    publico vacio asignarNombre(cadena nombre)
+        este.nombre = nombre
+    FinMetodo
+
+    publico cadena obtenerNombre()
+        retornar este.nombre
+    FinMetodo
+
+    publico vacio asignarAnioPublicacion(entero anio)
+        este.anioPublicacion = anio
+    FinMetodo
+
+    publico entero obtenerAnioPublicacion()
+        retornar este.anioPublicacion
+    FinMetodo
+
+    publico vacio asignarGenero(cadena genero)
+        este.genero = genero
+    FinMetodo
+
+    publico cadena obtenerGenero()
+        retornar este.genero
+    FinMetodo
+
+    publico vacio asignarNumPag(entero numPag)
+        este.numPag = numPag
+    FinMetodo
+
+    publico entero obtenerNumPag()
+        retornar este.numPag
+    FinMetodo
+
+    publico vacio asignarValor(real valor)
+        este.valor = valor
+    FinMetodo
+
+    publico real obtenerValor()
+        retornar este.valor
+    FinMetodo
+
+    publico vacio asignarCodEditorial(entero codEditorial)
+        este.codEditorial = codEditorial
+    FinMetodo
+
+    publico entero obtenerCodEditorial()
+        retornar este.codEditorial
+    FinMetodo
+
+    publico Libro leerDatos(entero cod)
+        Libro objL = nuevo Libro()
+        cadena nombre, genero
+        entero anio, paginas, editorial
+        real valor
+
+        objL.asignarCodigo(cod)
+
+        imprimir("Ingrese el nombre del libro:")
+        lea nombre
+
+        imprimir("Ingrese el año de publicación:")
+        lea anio
+
+        imprimir("Ingrese el género:")
+        lea genero
+
+        imprimir("Ingrese el número de páginas:")
+        lea paginas
+
+        imprimir("Ingrese el valor del libro:")
+        lea valor
+
+        imprimir("Ingrese el código de la editorial:")
+        lea editorial
+
+        objL.asignarNombre(nombre)
+        objL.asignarAnioPublicacion(anio)
+        objL.asignarGenero(genero)
+        objL.asignarNumPag(paginas)
+        objL.asignarValor(valor)
+        objL.asignarCodEditorial(editorial)
+
+        retornar objL
+    FinMetodo
+
+FinClase
