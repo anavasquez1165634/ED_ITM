@@ -1,0 +1,28 @@
+
+Clase Editorial
+
+    privado entero codigoEditorial
+    privado cadena nombreEditorial
+
+    publico vacio Editorial()
+        este.codigoEditorial = 0
+        este.nombreEditorial = ""
+    FinMetodo
+
+    publico vacio asignarCodigoEditorial(entero codigo)
+        este.codigoEditorial = codigo
+    FinMetodo
+
+    publico entero obtenerCodigoEditorial()
+        retornar este.codigoEditorial
+    FinMetodo
+
+    publico vacio asignarNombreEditorial(cadena nombre)
+        este.nombreEditorial = nombre
+    FinMetodo
+
+    publico cadena obtenerNombreEditorial()
+        retornar este.nombreEditorial
+    FinMetodo
+
+FinClase
