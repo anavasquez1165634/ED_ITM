@@ -1,0 +1,20 @@
+
+Clase Archivo
+
+    publico archivo AbrirLectura(cadena nombreArchivo)
+        // Abrir el archivo para lectura.
+    FinMetodo
+
+    publico cadena LeerLinea(archivo arch)
+        // Leer y retornar una línea del archivo.
+    FinMetodo
+
+    publico booleano FinArchivo(archivo arch)
+        // Indicar si ya se llegó al final.
+    FinMetodo
+
+    publico vacio CerrarArchivo(archivo arch)
+        // Cerrar el archivo.
+    FinMetodo
+
+FinClase
