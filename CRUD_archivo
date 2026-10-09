@@ -1,0 +1,40 @@
+
+Clase crudEditorial
+
+    publico booleano BuscarEditorial(entero codEditorial)
+
+        Archivo objA = nuevo Archivo()
+        Editorial objE
+        cadena linea
+        arreglo datos
+        booleano encontrado = falso
+
+        // Abrir Editorial.csv en modo lectura.
+        // Leer y omitir la primera línea: encabezados.
+
+        mientras (no sea fin de archivo) haga
+
+            linea = objA.LeerLinea()
+
+            // Separar la línea usando la coma.
+            datos = Separar(linea, ",")
+
+            objE = nuevo Editorial()
+            objE.asignarCodigoEditorial(
+                ConvertirEntero(datos[0])
+            )
+            objE.asignarNombreEditorial(datos[1])
+
+            si (objE.obtenerCodigoEditorial() == codEditorial) entonces
+                encontrado = verdadero
+            FinSi
+
+        FinMientras
+
+        objA.CerrarArchivo()
+
+        retornar encontrado
+
+    FinMetodo
+
+FinClase
