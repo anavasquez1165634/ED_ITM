@@ -1,0 +1,46 @@
+
+Clase ManejoPilaLibro
+
+    publico Pila IngresarDatos(Pila objP)
+
+        entero resp
+        entero cod
+        Libro objL
+        crudEditorial objCE = nuevo crudEditorial()
+
+        imprimir("¿Desea apilar un libro? 1. Sí  2. No")
+        lea resp
+
+        mientras (resp == 1) haga
+
+            imprimir("Ingrese el código del libro:")
+            lea cod
+
+            si (Buscar(objP, cod) == falso) entonces
+
+                objL = nuevo Libro()
+                objL = objL.leerDatos(cod)
+
+                si (objCE.BuscarEditorial(
+                    objL.obtenerCodEditorial()) == verdadero) entonces
+
+                    objP.Push(objL)
+                    imprimir("Libro apilado correctamente.")
+
+                sino
+                    imprimir("La editorial no existe en Editorial.csv.")
+                    imprimir("El libro no fue apilado.")
+                FinSi
+
+            sino
+                imprimir("El código del libro ya existe en la pila.")
+            FinSi
+
+            imprimir("¿Desea ingresar otro libro? 1. Sí  2. No")
+            lea resp
+
+        FinMientras
+
+        retornar objP
+
+    FinMetodo
