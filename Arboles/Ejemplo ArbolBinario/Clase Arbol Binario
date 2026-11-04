@@ -130,5 +130,37 @@ Fin Metodo
          retornar xxxx(n.getDer(), clave)
      FinSi
   Fin Metodo
+ publico Nodo buscarSinOrden(entero clave)
+      retornar buscarSinOrden(este.raiz, clave)
+ Fin Metodo
 
+ privado Nodo buscarSinOrden(Nodo n, entero clave)
+    Si n == nulo Entonces
+        retornar nulo
+    FinSi
+    Si n.getDato() == clave Entonces
+      retornar n
+    FinSi
+    Nodo r = buscarSinOrden(n.getIzq(), clave)
+     Si (r != nulo) Entonces
+           retornar r    // ya encuentra el nodo y no revisa el lado derecho
+     FinSi
+     retornar buscarSinOrden(n.getDer(), clave)
+ Fin Metodo
+  publico entero xxxxx()
+         este.contador = 0
+          xxxxx(este.raiz)
+          retornar este.contador
+  Fin Metodo
+
+  privado vacio xxxxxx(Nodo n)
+      Si (n == nulo) Entonces
+          retornar
+      FinSi
+      Si (n.getIzq() == nulo) y (n.getDer() == nulo) Entonces
+         este.contador = este.contador + 1
+      FinSi
+       xxxxxxx(n.getIzq())
+       xxxxxxx(n.getDer())
+    Fin Metodo
 fin clase ArbolBinario
